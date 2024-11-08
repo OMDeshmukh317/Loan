@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Loan Application{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'loanApp/styles.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="{% url 'predict' %}">Predict</a>
+        <a href="{% url 'data_analysis' %}">Data Analysis</a>
+        <a href="{% url 'about_project' %}">About Project</a>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
